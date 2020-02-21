@@ -1,0 +1,42 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Data Dog",
+      "image": "images/data_dog.png",
+      "features": [
+        "Pod Status",
+        "Node Status",
+        "Node Statistics",
+        "Daemon Status"
+      ],
+      "type": "Monitoring",
+      "price": "$5 / container",
+      "description": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "New Relic",
+      "image": "images/new_relic.png",
+      "features": [
+        "Pod Status",
+        "Node Status",
+        "Node Statistics"
+      ],
+      "type": "Monitoring",
+      "price": "$5 / node",
+      "description": "APM"
+    },
+    {
+      "id": "3",
+      "name": "Sumo Logic",
+      "image": "images/sumo_logic.png",
+      "features": [
+        "Pod Status"
+      ],
+      "type": "Monitoring",
+      "price": "$5 / day per GB logs",
+      "description": "Logs"
+    }
+  ]
+}

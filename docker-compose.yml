@@ -1,0 +1,29 @@
+version: "3.5"
+
+services:
+  mongodb:
+    image: mongo
+    networks:
+      - dev
+    ports:
+      - "27017:27017"
+
+  mongo-seed:
+    build: ./mongo-seed
+    depends_on:
+      - mongodb
+    networks:
+      - dev
+
+  # my webserver which uses mongo (not shown in example)
+  # webserver:
+  #   build: ./backend
+  #   ports:
+  #     - "8080:8080"
+  #   networks:
+  #     - dev
+
+networks:
+  dev:
+    name: dev
+    driver: bridge

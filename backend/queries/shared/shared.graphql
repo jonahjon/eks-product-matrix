@@ -1,0 +1,9 @@
+type Product {
+  id: ID!
+  name: String!
+  image: String!
+  saas_type: String!
+  price: String!
+  description: String!
+  features: [String]!
+}
