@@ -1,6 +1,8 @@
 import React from 'react'
 import './styles.css'
 import Badge from 'react-bootstrap/Badge'
+import { getProducts } from '../../graphql/queries';
+import { graphql } from 'react-apollo';
 
 String.prototype.Capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
@@ -39,4 +41,4 @@ const Product = ({product, compare}) =>
         </div>
     </div>;
 
-export default Product
+export default graphql(getProducts)(Product);

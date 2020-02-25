@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import Badge from 'react-bootstrap/Badge'
 import './styles.css'
-import { compileFunction } from 'vm';
 
 String.prototype.Capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
@@ -24,7 +23,7 @@ function createunique(d) {
   var uniquearray = d[0].features.concat(d[1].features);
   var tempSet = new Set(uniquearray);
   uniquearray = Array.from(tempSet);
-  console.log("uniquearray " + uniquearray)
+  //console.log("uniquearray " + uniquearray)
   return uniquearray
 }
 
@@ -37,9 +36,6 @@ function compare(arr1,arr2){
   ));
   return finalarray
 }
-
-var intersection = []
-
 const Compare = ({ products }) =>
   <div className="row compare">
     <div className="col-12 mt-5 text-center">

@@ -15,13 +15,14 @@ services:
     networks:
       - dev
 
-  # my webserver which uses mongo (not shown in example)
-  # webserver:
-  #   build: ./backend
-  #   ports:
-  #     - "8080:8080"
-  #   networks:
-  #     - dev
+  webserver:
+    build: ./backend
+    depends_on:
+      - mongodb
+    ports:
+      - "8080:8080"
+    networks:
+      - dev
 
 networks:
   dev:

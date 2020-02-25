@@ -3,13 +3,14 @@ import {bindActionCreators} from 'redux'
 import {Compare, ProductList} from '../../components'
 import * as productActions from '../../actions/product'
 import {connect} from 'react-redux'
+import { getProducts } from '../../graphql/queries';
 
-class Home extends Component {
+class Home extends React.Component {
   componentWillMount() {
     this.props.actions.getProducts()
   }
-
   render() {
+    console.log(this.props)
     const {products, actions} = this.props;
     const compareProducts = products.filter(product => product.compare);
 
@@ -36,4 +37,4 @@ export default connect(
   dispatch => ({
     actions: bindActionCreators(productActions, dispatch)
   })
-)(Home)
+)(Home);
