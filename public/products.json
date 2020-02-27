@@ -10,7 +10,7 @@
         "Node Statistics",
         "Daemon Status"
       ],
-      "type": "Monitoring",
+      "saas_type": "Monitoring",
       "price": "$5 / container",
       "description": "Infra"
     },
@@ -23,7 +23,7 @@
         "Node Status",
         "Node Statistics"
       ],
-      "type": "Monitoring",
+      "saas_type": "Monitoring",
       "price": "$5 / node",
       "description": "APM"
     },
@@ -34,7 +34,7 @@
       "features": [
         "Pod Status"
       ],
-      "type": "Monitoring",
+      "saas_type": "Monitoring",
       "price": "$5 / day per GB logs",
       "description": "Logs"
     }

@@ -23,7 +23,6 @@ function createunique(d) {
   var uniquearray = d[0].features.concat(d[1].features);
   var tempSet = new Set(uniquearray);
   uniquearray = Array.from(tempSet);
-  //console.log("uniquearray " + uniquearray)
   return uniquearray
 }
 
@@ -54,12 +53,11 @@ const Compare = ({ products }) =>
         <tr className="condition">
             <th scope="row">Type</th>
             {products.map(product =>
-              <td key={product.id} className={product.type === "Monitoring" ? "bg-blue" : "bg-green"}>
-                {product.type}
+              <td key={product.id} className={product.saas_type === "Monitoring" ? "bg-blue" : "bg-green"}>
+                {product.saas_type}
               </td>
             )}
           </tr>
-          {console.log(compare(products[0].features, products[1].features))}
           {createunique(products).map((itemcount, index) => {
                 return (
                   <Fragment>

@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 
+	"github.com/gorilla/handlers"
 	"github.com/graphql-go/handler"
 )
 
@@ -28,7 +30,7 @@ func main() {
 	// Serve
 	mux := http.NewServeMux()
 	mux.Handle("/", http.FileServer(http.Dir("./public")))
-	mux.Handle("/graphql", disableCors(h))
+	mux.Handle("/graphql", handlers.LoggingHandler(os.Stdout, disableCors(h)))
 	log.Println("Now server is running on port 8080")
 	s := &http.Server{
 		Addr:    config.serveUri,

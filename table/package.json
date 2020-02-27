@@ -1,0 +1,11 @@
+{
+  "name": "table",
+  "version": "1.0.0",
+  "description": "Table of data for Container Partners",
+  "main": "index.js",
+  "author": "Jonah Jones",
+  "license": "MIT",
+  "dependencies": {
+    "tablemark": "^2.0.0"
+  }
+}

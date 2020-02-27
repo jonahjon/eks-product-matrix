@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {Product} from '../'
+// import { getProductsQuery } from '../../graphql/queries';
+// import { graphql } from 'react-apollo';
+// export default graphql(getProductsQuery)(Product);
 
 const ProductList = ({products, compare}) =>
   <div className="row mt-3">

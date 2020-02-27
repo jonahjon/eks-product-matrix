@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
 import Badge from 'react-bootstrap/Badge'
-import { getProducts } from '../../graphql/queries';
+import { getProductsQuery } from '../../graphql/queries';
 import { graphql } from 'react-apollo';
 
 String.prototype.Capitalize = function() {
@@ -21,7 +21,7 @@ const Product = ({product, compare}) =>
                     <span className="align-items-center">{product.name}</span>
                     <span className="product_badge">
                         <Badge pill variant="primary">
-                            {product.type}
+                            {product.saas_type}
                         </Badge>
                     </span>
                     <span className="align-items-center"></span>
@@ -41,4 +41,4 @@ const Product = ({product, compare}) =>
         </div>
     </div>;
 
-export default graphql(getProducts)(Product);
+export default graphql(getProductsQuery)(Product);
