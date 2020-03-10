@@ -2,6 +2,7 @@ package main
 
 import (
 	"errors"
+	"os"
 	"strings"
 )
 
@@ -16,4 +17,12 @@ func isRequired(list map[string]string) error {
 		}
 	}
 	return err
+}
+
+func getEnv(key, defaultValue string) string {
+	value := os.Getenv(key)
+	if len(value) == 0 {
+		return defaultValue
+	}
+	return value
 }

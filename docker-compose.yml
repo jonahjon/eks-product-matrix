@@ -23,7 +23,9 @@ services:
       - "8080:8080"
     networks:
       - dev
-
+    environment:
+     - MONGO_NAME=mongodb
+     
 networks:
   dev:
     name: dev

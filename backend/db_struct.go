@@ -12,4 +12,10 @@ type ProductModel struct {
 	SaasType    string             `bson:"saas_type,omitempty" json:"saas_type,omitempty"`
 	Price       string             `bson:"price,omitempty" json:"price,omitempty"`
 	Description string             `bson:"description,omitempty" json:"description,omitempty"`
+	Features    []FeatureModel     `bson:"features,omitempty" json:"features,omitempty"`
+}
+
+//FeatureModel is for features
+type FeatureModel struct {
+	Feature string `bson:"feature" json:"feature"`
 }

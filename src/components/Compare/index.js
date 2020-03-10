@@ -1,40 +1,107 @@
 import React, { Fragment } from 'react'
-import Badge from 'react-bootstrap/Badge'
+import 'font-awesome/css/font-awesome.min.css';
 import './styles.css'
+import '../../assets/styles.css'
+
 
 String.prototype.Capitalize = function() {
   return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
-function whichlonger(d) {
-  var longerarray = []
-  var shorterarray = []
-  if (d[0].features.length <= d[1].features.length) {
-     longerarray = d[1].features;
-     shorterarray = d[0].features;
-  } else {
-     longerarray = d[0].features;
-     shorterarray = d[1].features;
-  }
-  return [longerarray, shorterarray]
+function comparemaps(unique, arr1, arr2){
+  var result1 = arr1.filter(function (o1) {
+    return unique.some(function (o2) {
+      if (o1.feature === o2.feature) {
+        return (o1, o2);
+      } else {
+        return null;
+      }
+    });
+  });
+
+  var result2 = arr2.filter(function (o1) {
+    return unique.some(function (o2) {
+      if (o1.feature === o2.feature) {
+        return (o1, o2);
+      } else {
+        return null;
+      }
+    });
+  });
+  var returnboth = 
+  <Fragment>
+    <td>
+      <div class="status-badge">
+        <div class="badge">
+          <span class="icon">
+            <i class="fa fa-check-circle"></i>
+          </span>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="status-badge">
+        <div class="badge">
+          <span class="icon">
+            <i class="fa fa-check-circle"></i>
+          </span>
+        </div>
+      </div>
+    </td>
+  </Fragment>
+
+  var returnthisfirst = 
+    <Fragment>
+    <td>
+      <div class="status-badge">
+        <div class="badge">
+          <span class="icon">
+            <i class="fa fa-check-circle"></i>
+          </span>
+        </div>
+      </div>
+    </td>
+    <td>
+    </td>
+    </Fragment>
+
+  var returnthissecond = 
+    <Fragment>
+      <td>
+      </td>
+      <td>
+      <div class="status-badge">
+        <div class="badge">
+          <span class="icon">
+            <i class="fa fa-check-circle"></i>
+          </span>
+        </div>
+      </div>
+    </td>
+    </Fragment>
+
+  if (result1.length === 0) {
+    return returnthissecond
+    } else if (result2.length === 0) {
+      return returnthisfirst
+    } else {
+      return returnboth
+    }
 }
 
-function createunique(d) {
-  var uniquearray = d[0].features.concat(d[1].features);
-  var tempSet = new Set(uniquearray);
-  uniquearray = Array.from(tempSet);
+function createunique(d1) {
+  var arr1 = d1[0].features
+  var arr2 = d1[1].features
+  arr1 = arr1.concat(arr2) // merge two arrays
+  let foo = new Map();
+  for(const tag of arr1) {
+    foo.set(tag.feature, tag);
+  }
+  let uniquearray = [...foo.values()]
   return uniquearray
 }
 
-function compare(arr1,arr2){
-  const finalarray=[];
-  arr1.forEach((e1)=>arr2.forEach((e2)=> {if(e1 === e2){
-        finalarray.push(e1)
-      }
-    }
-  ));
-  return finalarray
-}
+
 const Compare = ({ products }) =>
   <div className="row compare">
     <div className="col-12 mt-5 text-center">
@@ -58,29 +125,12 @@ const Compare = ({ products }) =>
               </td>
             )}
           </tr>
-          {createunique(products).map((itemcount, index) => {
+          {createunique(products).map((features, index) => {
                 return (
                   <Fragment>
                   <tr className="features">
-                    <th scope="row">{itemcount.Capitalize()}</th>
-                          {(index +1) <= (whichlonger(products))[1].length ?
-                          <Fragment>
-                            <td>
-                              <Badge pill variant="success"></Badge>
-                            </td>
-                            <td>
-                              <Badge pill variant="success"></Badge>
-                            </td>
-                          </Fragment>
-                          :
-                          <Fragment>
-                            <td>
-                              <Badge pill variant="success"></Badge>
-                            </td>
-                            <td>
-                            </td>
-                          </Fragment>
-                      }
+                    <th scope="row">{features.feature}</th>
+                      {comparemaps([features], products[0].features, products[1].features)}
                     </tr>
                   </Fragment>
                 );
@@ -88,7 +138,7 @@ const Compare = ({ products }) =>
           <tr className="condition">
             <th scope="row">Price</th>
             {products.map(product =>
-              <td key={product.id} className={"bg-green"}>
+              <td key={product.id} className={"bg-red"}>
                 {product.price}
               </td>
             )}

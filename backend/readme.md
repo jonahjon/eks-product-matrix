@@ -39,6 +39,7 @@ fragment SampleProduct on Product {
   saas_type
   price
   description
+  features{feature}
 }
 
 {
@@ -51,19 +52,24 @@ fragment SampleProduct on Product {
 ```
 {
   getAllProducts {
-    ...SampleProduct
+    ...AllProduct
   }
 }
 
-fragment SampleProduct on Product {
+
+
+fragment AllProduct on Product {
   _id
   name
   image
   saas_type
   price
-  description
+	description
+  features {feature}
 }
+
 ```
+
 
 
 

@@ -12,6 +12,7 @@ query {
     saas_type
     price
     description
+    features {feature}
   }
 }
 `;

@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -28,6 +29,7 @@ func (db mongoDB) getAllProducts() (interface{}, error) {
 			return nil, err
 		}
 		results = append(results, elem)
+		fmt.Printf("%v\n", elem.Features)
 	}
 	if err = cur.Err(); err != nil {
 		return nil, err
@@ -46,6 +48,7 @@ func (db mongoDB) getProduct(name string) (interface{}, error) {
 	if err != nil {
 		return nil, err
 	}
+	fmt.Printf("%v\n", results)
 	return results, nil
 }
 

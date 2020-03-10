@@ -8,13 +8,10 @@ class Home extends React.Component {
   componentWillMount() {
     //this.props.actions.getProductsgraph()
     this.props.actions.getProducts()
-
   }
   render() {
-    //console.log(this.props)
     const {products, actions} = this.props;
     const compareProducts = products.filter(product => product.compare);
-
     return (
       <div className="home mt-5">
         <div className="row">

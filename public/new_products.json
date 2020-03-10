@@ -1,0 +1,189 @@
+{
+  "security": [
+    {
+      "id": "1",
+      "name": "Aqua",
+      "saas_type": "security",
+      "description": "",
+      "image": "images/aqua.png",
+      "container_marketplace": "yes",
+      "cve_image_scanning": "yes",
+      "host_vulnerability_scanning": "yes",
+      "runtime_protection": "yes",
+      "guided_remediation": "yes",
+      "security_hub_integration": "yes",
+      "secrets_integrations": ["ui", "vault", "aws_kms"],
+      "alerting": ["slack", "pager_duty", "webhook"],
+      "compliance": ["PCI-DSS", "HIPAA", "GDPR", "NIST"],
+      "siem_integrations": ["splunk", "cloudwatch", "prometheus", "datadog", "sumologic", "elastisearch"],
+      "identity_management": ["AD", "LDAP", "Okta", "SAML", "OpenID"],
+      "cicd_integrations": ["jenkins", "circleCI", "gitlab", "teamcity", "codefresh"],
+      "file_level_integrity_monitoring": ["host", "checksum_scan"],
+      "service_mesh_integrations": ["istio", "appmesh"]
+    },
+    {
+      "id": "2",
+      "name": "Twistlock",
+      "saas_type": "security",
+      "description": "",
+      "image": "images/twistlock.png",
+      "container_marketplace": "yes",
+      "cve_image_scanning": "yes",
+      "host_vulnerability_scanning": "yes",
+      "runtime_protection": "yes",
+      "guided_remediation": "yes",
+      "security_hub_integration": "yes",
+      "secrets_integrations": ["ui", "vault", "aws_secretsmanager", "aws_ssm"],
+      "alerting": ["slack", "pager_duty", "webhook"],
+      "compliance": ["PCI-DSS", "HIPAA", "GDPR", "NIST"],
+      "siem_integrations": ["splunk", "prometheus", "datadog", "sumologic"],
+      "identity_management": ["AD", "LDAP", "SAML"],
+      "cicd_integrations": ["jenkins", "circleCI", "gitlab"],
+      "file_level_integrity_monitoring": ["host", "checksum_scan", "realtime_scan"],
+      "service_mesh_integrations": ["istio", "appmesh"]
+    },
+    {
+      "id": "3",
+      "name": "SysDig",
+      "saas_type": "security",
+      "description": "",
+      "image": "images/sysdig.png",
+      "container_marketplace": "yes",
+      "cve_image_scanning": "yes",
+      "host_vulnerability_scanning": "yes",
+      "runtime_protection": "yes, kernal level with falco",
+      "guided_remediation": "yes",
+      "security_hub_integration": "yes",
+      "secrets_integrations": "no",
+      "alerting": ["slack", "pager_duty", "webhook", "victorops"],
+      "compliance": ["PCI-DSS", "HIPAA", "GDPR", "NIST"],
+      "siem_integrations": ["splunk", "prometheus", "syslog"],
+      "identity_management": ["AD", "LDAP", "Okta", "SAML", "OpenID"],
+      "cicd_integrations": ["jenkins", "circleCI", "gitlab"],
+      "file_level_integrity_monitoring": ["host", "checksum_scan", "realtime_scan"],
+      "service_mesh_integrations": ["istio", "appmesh"]
+    },
+    {
+      "id": "4",
+      "name": "StackRox",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "security",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "5",
+      "name": "AlertLogic",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "security",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "6",
+      "name": "Aporeto",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "security",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "7",
+      "name": "ThreatStack",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "security",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "8",
+      "name": "Tigera",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "security",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "9",
+      "name": "TrendMicro",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "security",
+      "price": "$5 / container",
+      "description": ""
+    }
+  ],
+  "monitoring": [
+    {
+      "id": "10",
+      "name": "DataDog",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "monitoring",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "11",
+      "name": "DynaTrace",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "monitoring",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "12",
+      "name": "New Relic",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "monitoring",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "13",
+      "name": "Splunk",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "monitoring",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "14",
+      "name": "Sumo Logic",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "monitoring",
+      "price": "$5 / container",
+      "description": ""
+    },
+    {
+      "id": "15",
+      "name": "WeaveWorks",
+      "image": "images/data_dog.png",
+      "features": [
+      ],
+      "saas_type": "monitoring",
+      "price": "$5 / container",
+      "description": ""
+    }
+  ]
+}

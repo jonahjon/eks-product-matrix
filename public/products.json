@@ -1,42 +1,78 @@
 {
   "products": [
-    {
-      "id": "1",
-      "name": "Data Dog",
-      "image": "images/data_dog.png",
+  {
+  "id": "1",
+  "name": "Data Dog",
+  "image": "images/data_dog.png",
+  "features": [
+      {"feature":"Pod Status"},
+      {"feature":"Node Status"},
+      {"feature":"Node Statistics"},
+      {"feature":"Daemon Status"}
+  ],
+  "saas_type": "Monitoring",
+  "price": "$5 / container",
+  "description": "Infra"
+  },
+  {
+  "id": "2",
+  "name": "New Relic",
+  "image": "images/new_relic.png",
+  "features": [
+      {"feature":"Pod Status"},
+      {"feature":"Node Status"},
+      {"feature":"Node Statistics"}
+  ],
+  "saas_type": "Monitoring",
+  "price": "$5 / node",
+  "description": "APM"
+  },
+  {
+  "id": "3",
+  "name": "Sumo Logic",
+  "image": "images/sumo_logic.png",
+  "features": [
+      {"feature":"Pod Status"}
+  ],
+  "saas_type": "Monitoring",
+  "price": "$5 / day per GB logs",
+  "description": "Logs"
+  },
+  {
+      "id": "4",
+      "name": "Aqua",
+      "image": "images/aqua.png",
       "features": [
-        "Pod Status",
-        "Node Status",
-        "Node Statistics",
-        "Daemon Status"
+        {"feature":"VM host scanning"},
+        {"feature":"Container Scanning"}
       ],
-      "saas_type": "Monitoring",
-      "price": "$5 / container",
-      "description": "Infra"
+      "saas_type": "Security",
+      "price": "100$ / month",
+      "description": "Security"
     },
     {
-      "id": "2",
-      "name": "New Relic",
-      "image": "images/new_relic.png",
+      "id": "5",
+      "name": "TwistLock",
+      "image": "images/twistlock.png",
       "features": [
-        "Pod Status",
-        "Node Status",
-        "Node Statistics"
+          {"feature":"ML threat detection"},
+          {"feature":"Container Scanning"}
       ],
-      "saas_type": "Monitoring",
-      "price": "$5 / node",
-      "description": "APM"
+      "saas_type": "Security",
+      "price": "150$ / month",
+      "description": "Security"
     },
     {
-      "id": "3",
-      "name": "Sumo Logic",
-      "image": "images/sumo_logic.png",
+      "id": "6",
+      "name": "Sysdig",
+      "image": "images/sysdig.png",
       "features": [
-        "Pod Status"
+          {"feature":"Container Scanning"},
+          {"feature":"eBPF tracing"}
       ],
-      "saas_type": "Monitoring",
-      "price": "$5 / day per GB logs",
-      "description": "Logs"
+      "saas_type": "Security",
+      "price": "80$ / month",
+      "description": "Security"
     }
-  ]
+]
 }

@@ -51,6 +51,17 @@ var ID = graphql.NewScalar(graphql.ScalarConfig{
 	},
 })
 
+//FeatureType is for the list of features
+var FeatureType = graphql.NewObject(graphql.ObjectConfig{
+	Name: "Features",
+	Fields: graphql.Fields{
+		"feature": &graphql.Field{
+			Type: graphql.String,
+		},
+	},
+},
+)
+
 //ProductType
 var ProductType = graphql.NewObject(graphql.ObjectConfig{
 	Name: "Product",
@@ -72,6 +83,9 @@ var ProductType = graphql.NewObject(graphql.ObjectConfig{
 		},
 		"description": &graphql.Field{
 			Type: graphql.String,
+		},
+		"features": &graphql.Field{
+			Type: graphql.NewList(FeatureType),
 		},
 	},
 })

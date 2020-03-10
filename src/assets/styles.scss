@@ -1,0 +1,22 @@
+@import "_colors.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+
+.status-badge {
+  width: rem(32);
+  display: inline-block;
+  @include badge($green, $white);
+  .badge {
+    .icon,
+    .label {
+      display: inline-table;
+      transition:all 0.3s;
+    }
+    .icon {
+      display: inline-block;
+      position: relative;
+      top: 1px;
+    }
+  }
+}

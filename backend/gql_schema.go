@@ -47,6 +47,9 @@ func initSchema() graphql.Schema {
 						},
 						"description": &graphql.ArgumentConfig{
 							Type: graphql.NewNonNull(graphql.String),
+						},
+						"features": &graphql.ArgumentConfig{
+							Type: graphql.NewNonNull(graphql.NewList(FeatureType)),
 						}},
 					Resolve: addProduct,
 				},
@@ -75,6 +78,9 @@ func initSchema() graphql.Schema {
 						},
 						"description": &graphql.ArgumentConfig{
 							Type: graphql.NewNonNull(graphql.String),
+						},
+						"features": &graphql.ArgumentConfig{
+							Type: graphql.NewNonNull(graphql.NewList(FeatureType)),
 						},
 					},
 					Resolve: updateProduct,

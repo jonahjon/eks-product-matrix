@@ -11,9 +11,13 @@ import (
 )
 
 var db mongoDB
+var mongohost string
 
 func main() {
 	fmt.Println("Golang+GraphQL+MongoDB Server v1.0.0")
+	mongoenv := getEnv("MONGO_NAME", "localhost")
+	mongohost = fmt.Sprintf("mongodb://%v:27017/eks", mongoenv)
+	fmt.Printf("%v\n", mongohost)
 
 	// MongoDB
 	db = connectDB()
