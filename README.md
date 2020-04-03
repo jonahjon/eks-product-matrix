@@ -21,6 +21,6 @@ The MIT License (MIT). Please see License File for more information.
 
 
 TODO
-- Test Graphql Backend with list
-- Test Graphql Frontend in actions/ now that you added features tab
-- Google how to fix compare comparing selected list 1 + 2 against composite list
+- Features/Categories tabs
+- Adding Buttons to Searching
+- Re-Adjust Size to be not to obstrusive
