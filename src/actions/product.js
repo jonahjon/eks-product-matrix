@@ -1,5 +1,5 @@
 import * as types from '../constants/types'
-import { getProductsQuery } from '../graphql/queries';
+// import { getProductsQuery } from '../graphql/queries';
 // import { graphql } from 'react-apollo';
 
 // export default graphql(getProductsQuery)(Product);

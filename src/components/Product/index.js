@@ -16,7 +16,7 @@ const Product = ({product, compare}) =>
             </div>
             <div className="stats">
                 <div className="stats-container">
-                    <span className="align-items-center">{product.name}</span>
+                    <span className="align-title-center">{product.name}</span>
                     <span className="product_badge">
                         <Badge pill variant={product.saas_type === "Monitoring" ? "primary" : "success"}>
                             {product.saas_type}

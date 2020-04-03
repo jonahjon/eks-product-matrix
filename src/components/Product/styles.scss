@@ -1,14 +1,14 @@
 @import '../../styles/_variables.scss';
 $image-overlay-opacity: 0.7;
 $product-green: $green;
-$product-blue: $blue;
+$product-blue: #00BFFF;
 
 .product {
   cursor: pointer;
   position: relative;
   padding-bottom: 50px;
-  min-height: 450px;
-  max-height: 450px;
+  min-height: 350px;
+  max-height: 425px;
   border-radius: 5px;
   overflow: hidden;
   transition: all 500ms ease-out;
@@ -79,8 +79,15 @@ $product-blue: $blue;
     }
 
     .align-items-center {
+      font-size: 12px;
       color: #393c45;
-      position:relative; 
+      position:relative;
+    }
+
+    .align-title-center {
+      font-size: 16px;
+      color: #393c45;
+      position:relative;
     }
 
     .product_badge {
@@ -88,7 +95,7 @@ $product-blue: $blue;
       font-size: 16px;
       font-weight: 400;
       border-radius: 10px;
-      margin: 2px 5px;
+      margin: 2px 1px;
       width: auto;
       display: flex;
       float: right;
@@ -125,7 +132,7 @@ $product-blue: $blue;
     margin-left: -85px;
     border: 2px solid #fff;
     color: #fff;
-    font-size: 19px;
+    font-size: 16px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 700;

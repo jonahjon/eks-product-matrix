@@ -46,12 +46,10 @@
       "image": "images/aqua.png",
       "features": [
         {"feature":"VM host scanning"},
-        {"feature":"Container Scanning"},
-        {"feature":"Runtime Protection"},
-        {"feature":"AWS Secrets Support"}
+        {"feature":"Container Scanning"}
       ],
       "saas_type": "Security",
-      "price": "X$ / month",
+      "price": "100$ / month",
       "description": "Security"
     },
     {
@@ -59,13 +57,11 @@
       "name": "TwistLock",
       "image": "images/twistlock.png",
       "features": [
-          {"feature":"VM host scanning"},
-          {"feature":"Container Scanning"},
-          {"feature":"Runtime Protection"},
-          {"feature":"AWS Secrets Support"}
-        ],
+          {"feature":"ML threat detection"},
+          {"feature":"Container Scanning"}
+      ],
       "saas_type": "Security",
-      "price": "X$ / month",
+      "price": "150$ / month",
       "description": "Security"
     },
     {
@@ -74,9 +70,7 @@
       "image": "images/sysdig.png",
       "features": [
           {"feature":"Container Scanning"},
-          {"feature":"eBPF tracing"},
-          {"feature":"Runtime Protection"},
-          {"feature":"Policy Alerting"}
+          {"feature":"eBPF tracing"}
       ],
       "saas_type": "Security",
       "price": "80$ / month",
@@ -88,10 +82,8 @@
       "image": "images/stackrox.png",
       "features": [
           {"feature":"Container Scanning"},
-          {"feature":"Network Security"},
-          {"feature":"Runtime Protection"},
-          {"feature":"AWS Secrets Support"}
-        ],
+          {"feature":"eBPF tracing"}
+      ],
       "saas_type": "Security",
       "price": "80$ / month",
       "description": "Security"
@@ -101,9 +93,8 @@
       "name": "AlertLogic",
       "image": "images/alert_logic.png",
       "features": [
-          {"feature":"Host Security"},
-          {"feature":"Live Support"},
-          {"feature":"HTTP Metrics"}
+          {"feature":"Container Scanning"},
+          {"feature":"eBPF tracing"}
       ],
       "saas_type": "Security",
       "price": "80$ / month",
@@ -114,9 +105,8 @@
       "name": "Aporeto",
       "image": "images/aporeto.png",
       "features": [
-          {"feature":"App Identity Policies"},
-          {"feature":"Multi Mesh Support"},
-          {"feature":"L7 Network Monitoring"}
+          {"feature":"Container Scanning"},
+          {"feature":"eBPF tracing"}
       ],
       "saas_type": "Security",
       "price": "80$ / month",
@@ -127,8 +117,8 @@
       "name": "ThreatStack",
       "image": "images/threat_stack.png",
       "features": [
-          {"feature":"Host Security"},
-          {"feature":"Runtime Protection"}
+          {"feature":"Container Scanning"},
+          {"feature":"eBPF tracing"}
       ],
       "saas_type": "Security",
       "price": "80$ / month",
@@ -139,10 +129,8 @@
       "name": "Tigera",
       "image": "images/tigera.png",
       "features": [
-          {"feature":"Network Security"},
-          {"feature":"Runtime Protection"},
-          {"feature":"Enriched Flowlows"},
-          {"feature":"L7 Network Monitoring"}
+          {"feature":"Container Scanning"},
+          {"feature":"eBPF tracing"}
       ],
       "saas_type": "Security",
       "price": "80$ / month",
@@ -153,9 +141,8 @@
       "name": "TrendMicro",
       "image": "images/trend_micro.png",
       "features": [
-        {"feature":"Container Scanning"},
-        {"feature":"Host Security"},
-        {"feature":"Runtime Protection"}
+          {"feature":"Container Scanning"},
+          {"feature":"eBPF tracing"}
       ],
       "saas_type": "Security",
       "price": "80$ / month",
